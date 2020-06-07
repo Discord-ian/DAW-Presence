@@ -16,7 +16,7 @@ namespace DAW_Presence
 
         public DAW(string daw)
         {
-            main_info = "Making Music"; // Going to be part of "global" config
+            main_info = "DAW Presence"; // Going to be part of "global" config
             _Id = "609115046051840050";
             switch (daw.ToLower())
             {
@@ -63,14 +63,15 @@ namespace DAW_Presence
                 {
                     if (!Utils.CheckForUntitled(temp_title))
                     {
-                        string splitString = temp_title.Split("[")[0];
+                      /*  string splitString = temp_title.Split("[")[0];
                         if (splitString.Contains("*"))
                         {
                             splitString = splitString.Split("*")[0];
                         }
                         splitString = splitString.Trim(); // remove any trailing spaces after stripping * 
                         _Title = splitString;
-                        return splitString;
+                        return splitString; */
+                      return null;
                     }
                     _Title = "Untitled";
                     return "Untitled";
