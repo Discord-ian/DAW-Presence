@@ -4,7 +4,7 @@
  C# Application to show everyone what music you are working on
  
 ## Example
-![Presence](https://i.imgur.com/q5kQSTa.png)
+![Presence](https://i.imgur.com/q5kQSTa.png) 
 ## Features
 Crossed out features haven't been implemented yet.
 
@@ -21,6 +21,7 @@ Crossed out features haven't been implemented yet.
 ## Reporting Bugs
 
 Template for opening Github Issues is as follows
+(Will be updated before 1.0.0 release)
 ```
 Operating System: (Windows, Linux, etc)
 DAW: (Ableton, FL, etc)
