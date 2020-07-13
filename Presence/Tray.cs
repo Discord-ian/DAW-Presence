@@ -30,7 +30,7 @@ namespace DAW_Presence
             CheckRPCState();
             this.icon.ContextMenuStrip.Items.Add(rpc);
             this.icon.ContextMenuStrip.Items.Add("-"); // spacer
-            this.icon.ContextMenuStrip.Items.Add("Add To Blacklist", null, this.ToggleBlacklist);
+            /*this.icon.ContextMenuStrip.Items.Add("Add To Blacklist", null, this.ToggleBlacklist);
             blacklist = new ToolStripMenuItem();
             CheckBlacklist();
             this.icon.ContextMenuStrip.Items.Add(blacklist);
@@ -39,7 +39,8 @@ namespace DAW_Presence
             whitelist = new ToolStripMenuItem();
             CheckWhitelist();
             this.icon.ContextMenuStrip.Items.Add(whitelist);
-            this.icon.ContextMenuStrip.Items.Add("-"); // spacer
+            */
+            //this.icon.ContextMenuStrip.Items.Add("-"); // spacer
             this.icon.ContextMenuStrip.Items.Add("Exit", null, this.MenuExit);
         }
         void MenuExit(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace DAW_Presence
             Environment.Exit(0);
         }
 
-        void ToggleBlacklist(object sender, EventArgs e)
+        /*void ToggleBlacklist(object sender, EventArgs e)
         {
             blacklist.Text = "Disable Blacklist";
         }
@@ -67,10 +68,11 @@ namespace DAW_Presence
         {
             whitelist.Text = "Enable Whitelist";
             whitelist.Click += new EventHandler(this.ToggleWhitelist);
-        }
+        }*/
 
         void ToggleRPC(object sender, EventArgs e)
         {
+            //RPCActive = false;
             rpc.Text = "Enable RPC";
         }
 

@@ -10,7 +10,8 @@ namespace DAW_Presence
     {
         private static DiscordRpcClient client;
         private static string current_info = null;
-
+        public static string _V = "0.9.9";
+        public bool RPCActive = true;
         static void Main(string[] args)
         {
             // stop there from being multiple copies running at the same time
@@ -72,7 +73,9 @@ namespace DAW_Presence
                 Assets = new Assets()
                 {
                     LargeImageKey = info.Image.Name,
-                    LargeImageText = info.Image.Text
+                    LargeImageText = info.Image.Text,
+                    SmallImageKey = "daw_presence",
+                    SmallImageText = "DAW Presence " + _V
                 }
             });
             current_info = info.Title;

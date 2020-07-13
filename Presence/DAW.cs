@@ -16,16 +16,26 @@ namespace DAW_Presence
 
         public DAW(string daw)
         {
-            main_info = "DAW Presence"; // Going to be part of "global" config
-            _Id = "609115046051840050";
+            main_info = "Making Music"; // Going to be part of "global" config
+
             switch (daw.ToLower())
             {
                 case "ableton":
+                    {
+                        _Id = "609115046051840050";
+                        _TitleTemplate = "Ableton Live";
+                        img = new Image("main", "Ableton Live");
+                        break;
+                    }
+                   
+                case "fl":
                 {
-                    _TitleTemplate = "Ableton Live";
-                    img = new Image("main", "Ableton Live");
-                }
+                    _Id = "658520672976502784";
+                    _TitleTemplate = "FL Studio";
+                    img = new Image("main", "FL Studio");
                     break;
+                }
+                    
             }
         }
         public Image Image
@@ -63,14 +73,14 @@ namespace DAW_Presence
                 {
                     if (!Utils.CheckForUntitled(temp_title))
                     {
-                      /*  string splitString = temp_title.Split("[")[0];
+                        string splitString = temp_title.Split(new[] { "[" }, StringSplitOptions.None)[0];
                         if (splitString.Contains("*"))
                         {
-                            splitString = splitString.Split("*")[0];
+                            splitString = splitString.Split(new[] { "*" }, StringSplitOptions.None)[0];
                         }
                         splitString = splitString.Trim(); // remove any trailing spaces after stripping * 
                         _Title = splitString;
-                        return splitString; */
+                        return splitString;
                       return null;
                     }
                     _Title = "Untitled";
